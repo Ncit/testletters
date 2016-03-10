@@ -7,9 +7,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.drawable.GlideDrawable;
+import com.bumptech.glide.request.RequestListener;
+import com.bumptech.glide.request.target.Target;
 import com.nikita.learnletters.R;
 import com.nikita.learnletters.models.WordObject;
 
@@ -30,6 +34,8 @@ public class SelectedWordFragment extends Fragment {
     @Bind(R.id.translation)
     TextView translation;
 
+    @Bind(R.id.image_progress)
+    ProgressBar image_progress;
 
     CallBack listener;
     WordObject wordObject;
@@ -52,7 +58,19 @@ public class SelectedWordFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_selected_word, container, false);
         ButterKnife.bind(this,view);
-        Glide.with(this).load("https:" + wordObject.getImages().get(0).getVal()).into(word_image);
+        Glide.with(this).load("https:" + wordObject.getImages().get(0).getVal())
+                .listener(new RequestListener<String, GlideDrawable>() {
+                    @Override
+                    public boolean onException(Exception e, String model, Target<GlideDrawable> target, boolean isFirstResource) {
+                        return false;
+                    }
+
+                    @Override
+                    public boolean onResourceReady(GlideDrawable resource, String model, Target<GlideDrawable> target, boolean isFromMemoryCache, boolean isFirstResource) {
+                        image_progress.setVisibility(View.GONE);
+                        return false;
+                    }
+                }).into(word_image);
         title.setText(wordObject.getTranslation());
         translation.setText(wordObject.getText());
         return view;
