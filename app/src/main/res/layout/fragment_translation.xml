@@ -1,0 +1,91 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/transparent"
+    tools:context="com.nikita.learnletters.fragments.TranslationFragment">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/black"
+        android:textSize="36sp"
+        android:layout_marginTop="78dp"
+        android:text="apricot"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/first_element"
+        android:onClick="chooseAnswer"
+        android:tag="0"
+        android:layout_above="@+id/second_element"
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="false"
+        android:text="баклажан"
+        android:textSize="18sp"
+        android:background="@drawable/rounded_button"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="272dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="30dp"/>
+
+    <Button
+        android:id="@+id/second_element"
+        android:onClick="chooseAnswer"
+        android:tag="1"
+        android:layout_above="@+id/third_element"
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="false"
+        android:text="баклажан"
+        android:textSize="18sp"
+        android:background="@drawable/rounded_button"
+        android:layout_marginTop="12dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="272dp"
+        android:layout_height="56dp" />
+    <Button
+        android:id="@+id/third_element"
+        android:onClick="chooseAnswer"
+        android:tag="2"
+        android:layout_above="@+id/fourh_element"
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="false"
+        android:text="баклажан"
+        android:textSize="18sp"
+        android:background="@drawable/rounded_button"
+        android:layout_marginTop="12dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="272dp"
+        android:layout_height="56dp" />
+    <Button
+        android:id="@+id/fourh_element"
+        android:onClick="chooseAnswer"
+        android:tag="3"
+        android:layout_above="@+id/close_button"
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="false"
+        android:text="баклажан"
+        android:textSize="18sp"
+        android:background="@drawable/rounded_button"
+        android:layout_marginTop="12dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="272dp"
+        android:layout_height="56dp" />
+    <Button
+        android:id="@+id/close_button"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="false"
+        android:text="Не помню"
+        android:textColor="#5D9CEC"
+        android:textSize="18sp"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="12dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="272dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="20dp"/>
+
+</RelativeLayout>

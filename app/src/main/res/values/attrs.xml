@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="WordView">
+        <attr name="wordBackground" format="color" />
+        <attr name="wordText" format="string"/>
+        <attr name="wordTextColor" format="color"/>
+        <attr name="wordTextSize" format="color"/>
+    </declare-styleable>
+</resources>

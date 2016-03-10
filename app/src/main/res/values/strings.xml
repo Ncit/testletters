@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">LearnLetters</string>
+    <string name="start_learn">Начать тренировку</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="next">Дальше</string>
+    <string name="retry">Еще раз</string>
+</resources>

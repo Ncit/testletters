@@ -1,0 +1,33 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="com.nikita.learnletters.fragments.StartFragment">
+
+    <TextView
+        android:visibility="gone"
+        android:fontFamily="fontFamily: sans-serif-light"
+        android:layout_marginBottom="58dp"
+        android:id="@+id/retry_counter"
+        android:layout_above="@+id/word_button"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/black"
+        android:textSize="48sp"
+        android:text="0/7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/word_button"
+        android:textAllCaps="false"
+        android:text="@string/start_learn"
+        android:textSize="22sp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/rounded_button_orange"
+        android:layout_marginTop="12dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="272dp"
+        android:layout_height="56dp"
+        android:layout_centerInParent="true" />
+</RelativeLayout>

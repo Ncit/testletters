@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:clickable="true"
+    tools:context="com.nikita.learnletters.fragments.SelectedWordFragment">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_below="@+id/progressbar"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/black"
+        android:textSize="36sp"
+        android:layout_marginTop="78dp"
+        android:text="apricot"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:layout_above="@+id/translation"
+        android:background="@android:color/white"
+        android:id="@+id/word_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"/>
+    <TextView
+        android:id="@+id/translation"
+        android:fontFamily="sans-serif-light"
+        android:layout_above="@+id/next"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:layout_marginBottom="10dp"
+        android:text=""
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/next"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="false"
+        android:text="@string/next"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/rounded_button_green"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="272dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="26dp"/>
+</RelativeLayout>
